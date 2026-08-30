@@ -1,0 +1,7 @@
+* text=auto eol=lf
+*.sh text eol=lf diff=shell
+*.mjs text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+.nvmrc text eol=lf

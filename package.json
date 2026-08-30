@@ -5,9 +5,19 @@
   "description": "Universal agentic build guide — small core + on-demand layers",
   "type": "module",
   "packageManager": "pnpm@10.12.1",
+  "engines": {
+    "node": ">=22.15.1"
+  },
   "scripts": {
     "lint": "echo \"no lint yet\"",
     "typecheck": "echo \"no typecheck yet\"",
     "test:coverage": "echo \"no tests yet\""
+  },
+  "devDependencies": {
+    "semantic-release": "^24.2.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.3",
+    "conventional-changelog-conventionalcommits": "^8.0.0"
   }
 }
