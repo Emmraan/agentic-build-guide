@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/Emmraan/agentic-build-guide/compare/v1.0.0...v1.1.0) (2026-08-30)
+
+
+### Features
+
+* add L28-L37 learnings and 10 compact feedback files from build to tag ([ec0a442](https://github.com/Emmraan/agentic-build-guide/commit/ec0a4423ef6e6218a2a330770a4c71cbcf0ab4a2))
+
 # 1.0.0 (2026-08-30)
 
 
