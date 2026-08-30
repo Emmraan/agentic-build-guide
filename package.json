@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "description": "Universal agentic build guide — small core + on-demand layers",
   "type": "module",
+  "packageManager": "pnpm@10.12.1",
   "scripts": {
     "lint": "echo \"no lint yet\"",
     "typecheck": "echo \"no typecheck yet\"",

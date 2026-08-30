@@ -1,8 +1,8 @@
-# Agentic Build Guide — Universal v2
+# Agentic Build Guide: Universal v2
 
-Small core + on-demand layers to build any product like a company does with a real SWE. Always up-to-date via references, not dumps.
+Small core and on-demand layers to build any product like a company with a real SWE. Always up to date via references, not dumps.
 
-> Core `AGENTIC_BUILD_GUIDE.md` ~113 lines, ~800 tokens. Templates, archetypes, and resources load on-demand.
+> Core `AGENTIC_BUILD_GUIDE.md` is about 113 lines, around 800 tokens. Templates, archetypes and resources load on demand.
 
 ## Features
 
@@ -34,7 +34,7 @@ maintenance/{day2,upgrade,deprecation,resume}.md
 resources/{token-optimization,code-graph,memory}/
 docs/agent-feedback/00-template.md
 scripts/{protect-branch.sh,setup-bots.sh,check-*.sh}
-.github/workflows/{validate,release,docker-publish,terraform}.yml
+.github/workflows/{validate,release,docker-publish}.yml
 .opencode/commands/{new-phase,ship-phase,retro}.md
 ```
 
