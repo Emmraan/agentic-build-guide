@@ -1,17 +1,12 @@
-# ref: ../REFERENCES.md — web-fetch latest (L24); GH006 bypass via GitHub App — see release docs
 name: release
 on: { push: { branches: [main] } }
 permissions: { contents: write, issues: write, pull-requests: write }
 jobs:
   release:
     runs-on: ubuntu-latest
-    environment: semantic-release
     steps:
-      - id: app
-        uses: tibdex/github-app-token@v2
-        with: { app_id: ${{ secrets.APP_ID }}, private_key: ${{ secrets.APP_PRIVATE_KEY }} }
       - uses: actions/checkout@v4
-        with: { token: ${{ steps.app.outputs.token }}, fetch-depth: 0, persist-credentials: true }
+        with: { fetch-depth: 0 }
       - uses: pnpm/action-setup@v4
         with:
           version: 10.12.1
@@ -22,4 +17,4 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: npx semantic-release
-        env: { GITHUB_TOKEN: ${{ steps.app.outputs.token }} }
+        env: { GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} }
