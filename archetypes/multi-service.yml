@@ -1,0 +1,12 @@
+name: multi-service
+stack: nextjs + typescript + docker + turborepo + postgres + redis
+refs:
+  nextjs: https://nextjs.org/docs
+  docker: https://docs.docker.com/build/building/multi-stage/
+  turborepo: https://turbo.build/repo/docs
+phases: P0-P15 + infra (docker-compose, env separation)
+ownership: apps/*, packages/ui/*, services/*, infra/*
+gates: { loc: "<500", coverage: "lib/ 80%" }
+resources: [code-graph]
+deploy: docker + AWS/GCP (terraform + k8s)
+# ref: ../REFERENCES.md — web-fetch latest (L24)

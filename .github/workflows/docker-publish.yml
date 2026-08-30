@@ -1,0 +1,13 @@
+# ref: ../REFERENCES.md — docker/metadata + build-push latest (L24)
+name: docker-publish
+on: { push: { branches: [main], tags: ["v*"] } }
+permissions: { contents: read, packages: write }
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/metadata-action@v5
+        with: { images: ghcr.io/${{ github.repository }} }
+      - uses: docker/build-push-action@v6
+        with: { push: true, tags: ${{ steps.meta.outputs.tags }} }

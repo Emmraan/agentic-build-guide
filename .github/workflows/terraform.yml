@@ -1,0 +1,13 @@
+# ref: ../REFERENCES.md — hashicorp/setup-terraform + provider docs latest (L24)
+name: terraform
+on: { push: { branches: [main] }, workflow_dispatch: {} }
+permissions: { contents: read, id-token: write }
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - run: terraform init && terraform plan
+        working-directory: infra

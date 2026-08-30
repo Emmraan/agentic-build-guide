@@ -1,0 +1,10 @@
+node_modules
+.next
+dist
+coverage
+.env
+.env.local
+# Note: when this guide is copied into a product repo, add `agentic-build-guide/` there (L19)
+*_planning/
+UNIVERSAL_CONTEXT.md
+.DS_Store

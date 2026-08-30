@@ -1,0 +1,12 @@
+name: ai-native
+stack: nextjs + typescript + ai-sdk + vector-db + tailwind
+refs:
+  nextjs: https://nextjs.org/docs
+  ai-sdk: https://sdk.vercel.ai/docs
+  tailwind: https://tailwindcss.com/docs
+phases: P0-P15 + ai (prompt, eval, RAG)
+ownership: app/*, lib/ai/*, lib/rag/*, components/ui/*
+gates: { loc: "<500", coverage: "lib/ 80%", eval: "prompt tests" }
+resources: [code-graph, memory]
+deploy: vercel ai + vercel crons
+# ref: ../REFERENCES.md — web-fetch latest (L24)

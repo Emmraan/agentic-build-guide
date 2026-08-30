@@ -1,0 +1,11 @@
+name: static-site
+stack: nextjs + typescript + tailwind + SSG
+refs:
+  nextjs: https://nextjs.org/docs
+  typescript: https://www.typescriptlang.org/docs
+  tailwind: https://tailwindcss.com/docs
+phases: P0-P15 minimal (skip P3-P5 data heavy)
+ownership: app/*, lib/seo.ts, components/ui/*
+gates: { loc: "<500", coverage: "lib/ 80%" }
+deploy: vercel/github-pages
+# ref: ../REFERENCES.md — web-fetch latest before scaffold (L24)

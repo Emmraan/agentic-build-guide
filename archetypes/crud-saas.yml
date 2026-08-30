@@ -1,0 +1,12 @@
+name: crud-saas
+stack: nextjs + typescript + prisma + auth + tailwind + pnpm
+refs:
+  nextjs: https://nextjs.org/docs
+  prisma: https://www.prisma.io/docs
+  tailwind: https://tailwindcss.com/docs
+  pnpm: https://pnpm.io/installation
+phases: P0-P15 full (P3-P5 data/models, P6 ui kit)
+ownership: app/*, lib/db.ts, lib/schemas.ts, components/ui/*
+gates: { loc: "<500", coverage: "lib/ 80%", validate: "schemas" }
+deploy: vercel + postgres
+# ref: ../REFERENCES.md — web-fetch latest (L24)

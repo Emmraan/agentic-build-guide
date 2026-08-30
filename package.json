@@ -1,0 +1,12 @@
+{
+  "name": "agentic-build-guide",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Universal agentic build guide — small core + on-demand layers",
+  "type": "module",
+  "scripts": {
+    "lint": "echo \"no lint yet\"",
+    "typecheck": "echo \"no typecheck yet\"",
+    "test:coverage": "echo \"no tests yet\""
+  }
+}
