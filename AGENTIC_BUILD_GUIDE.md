@@ -110,5 +110,18 @@ Evaluate future repos against 4 filters: modular plug, small core, token-efficie
 - Maintenance: `maintenance/{day2,upgrade,deprecation,resume}.md`.
 - All external versions/links: `REFERENCES.md` - web-fetch live before build (reference > dump, L24).
 
+## 13. Learnings L28-L37 (from build to tag)
+
+- L28 EOL lf via .gitattributes, renormalize, LF only.
+- L29 Scripts executable via git chmod + bash wrapper.
+- L30 Commit lockfile, restore cache, frozen install, pin .nvmrc.
+- L31 Single validate context, not 5.
+- L32 Release env must be block style, not flow.
+- L33 Pin semantic-release deps.
+- L34 AI dash replaced, PAT includes dash.
+- L35 README human standard with badges and TOC.
+- L36 Placeholder changelog with human header.
+- L37 Solo release via GITHUB_TOKEN, team via App.
+
 ---
 Compact core - meaning preserved. Keep this file ~250 lines; details in templates/resources via manifest.
