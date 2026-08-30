@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Emmraan/agentic-build-guide/compare/v1.1.0...v1.2.0) (2026-08-30)
+
+
+### Features
+
+* define docs vs feat vs fix and add commitlint for agent-feedback ([dcb83d3](https://github.com/Emmraan/agentic-build-guide/commit/dcb83d3f5a83727ecda22fb5cd691dfd6f6f1982))
+
 # [1.1.0](https://github.com/Emmraan/agentic-build-guide/compare/v1.0.0...v1.1.0) (2026-08-30)
 
 
