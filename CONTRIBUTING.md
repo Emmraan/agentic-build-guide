@@ -14,7 +14,7 @@ For developers and users - AI agents follow `AGENTIC_BUILD_GUIDE.md`.
 ## Branch and commit
 
 - Branches: `feat/*`, `fix/*`, `docs/*`, `chore/*`, `refactor/*`, `test/*` (day-2); `phase/NN-name` for phased builds.
-- Commits: `feat: add ...` triggers minor, `fix:` patch, `BREAKING CHANGE:` major (semantic-release).
+- Commits: `feat:` minor, `fix:` patch, `BREAKING CHANGE:` major, `docs:`/`chore:`/`refactor:`/`style:`/`test:` no tag. **Rule:** any change in `docs/agent-feedback/` or `L` in `AGENTIC_BUILD_GUIDE.md` must be `feat:` (even if files are `*.md`), CI bug fix must be `fix:` — never `docs:` for learnings. Pure `README` typo → `docs:` (no tag).
 
 ## What we check
 

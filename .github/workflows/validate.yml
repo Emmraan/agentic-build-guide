@@ -18,6 +18,8 @@ jobs:
       - run: pnpm lint
       - run: pnpm typecheck
       - run: pnpm test:coverage
-      - run: ./scripts/check-loc.sh
-      - run: ./scripts/check-ai-pattern.sh
-      - run: ./scripts/check-agentic-traces.sh
+      - run: bash ./scripts/check-loc.sh
+      - run: bash ./scripts/check-ai-pattern.sh
+      - run: bash ./scripts/check-agentic-traces.sh
+      - run: pnpm commitlint --from=origin/main --to=HEAD --verbose
+        if: github.event_name == 'pull_request'

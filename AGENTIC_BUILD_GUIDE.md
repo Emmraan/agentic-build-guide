@@ -85,7 +85,7 @@ Per phase defines:
 ## 9. Improvement loop - real SWE
 
 - Framework: `v1 → Project → Failure → Root-cause → Classify (SKILL|WORKFLOW|TEST|SPEC|ARCH|TOOLING|AGENT) → fix right layer → v2` (L5).
-- User says "aise nahi aise karo" → agent returns std format `docs/agent-feedback/NN.md` (Observation|Impact|RootCause|Classification|PreventiveChange|FrameworkChange file+lines|RegressionCheck) + next L block + diff (L20).
+- User says "aise nahi aise karo" → agent returns std format `docs/agent-feedback/NN.md` (Observation|Impact|RootCause|Classification|PreventiveChange|FrameworkChange file+lines|RegressionCheck) + next L block + diff (L20). **Rule:** `docs/agent-feedback/` or `L` change must be `feat:` (even if `*.md`), never `docs:` — `docs:` never tags.
 - New LLM: when built with newer model, agent also proposes ABG improvement from its knowledge in same format (L25).
 - Store incremental exp; prefer referencing (links to docs/skills/repos) over dumping so ABG stays latest via live web-fetch at build time (L24).
 
