@@ -1,7 +1,7 @@
-# PLAN — {{project_name}} (live tracker)
+# PLAN - {{project_name}} (live tracker)
 
 > Master plan. Every phase is a branch, a new session, deterministic exit criterion. Main verifies then squash-merge.
-> ref: `REFERENCES.md` for all external versions — web-fetch latest before build (L24).
+> ref: `REFERENCES.md` for all external versions - web-fetch latest before build (L24).
 
 ## Global rules
 
@@ -31,7 +31,7 @@ main <-- phase/00 -- merge -- phase/01 -- merge -- ... -- phase/15 -- merge
 
 | Phase | Branch | Depends_on | Owner files | Skills | Exit criterion | Status |
 |---|---|---|---|---|---|---|
-| P0 | `phase/00-repo-foundation` | — | AGENTS.md, PLAN.md, .gitignore etc | open-source-project-maintainer | files valid | [ ] pending |
+| P0 | `phase/00-repo-foundation` | - | AGENTS.md, PLAN.md, .gitignore etc | open-source-project-maintainer | files valid | [ ] pending |
 | P1 | `phase/01-scaffold` | P0 | configs, app shell | nextjs, typescript | build green | [ ] pending |
 | P2 | `phase/02-data-layer` | P1 | lib/types, schemas, data/ | typescript | validate ✓ | [ ] pending |
 | P3 | `phase/03-feature-a` | P2 | owners per DAG | per archetype | validate ✓ | [ ] pending |
@@ -55,9 +55,9 @@ Waves: P0-P2 seq → P3-P6 parallel → P7-P11 parallel → P12-P15 seq.
 At end of every phase, write `docs/handoffs/HANDOFF-NN.md` on same branch:
 
 ```
-# HANDOFF — phase/NN
+# HANDOFF - phase/NN
 Branch: phase/NN-name
-Status: complete — evidence {{lint 0, typecheck, tests}}
-Next: phase/MM — brief
+Status: complete - evidence {{lint 0, typecheck, tests}}
+Next: phase/MM - brief
 Resume: none or partial checkpoint
 ```

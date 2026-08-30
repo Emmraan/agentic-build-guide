@@ -1,11 +1,11 @@
-# Agentic Build Guide — Universal v2
+# Agentic Build Guide - Universal v2
 
 > Small core + on-demand layers. Build any product like a company does with a real SWE.
 > Core ~250 lines, ~800 tok always read. Rest via manifest + web-fetch (reference > dump).
 
 ## 1. How to use for new project
 
-1. Import: copy `agentic-build-guide/` into new repo dir. It is gitignored (L19) — never committed. `git ls-files | grep agentic` empty.
+1. Import: copy `agentic-build-guide/` into new repo dir. It is gitignored (L19) - never committed. `git ls-files | grep agentic` empty.
 2. Idea: give prompt OR drop `idea.txt`/`idea.md` in root then say `read idea`.
 3. Discovery: agent asks follow-ups (scope, budget, users), runs `using-agent-skills` + `find-skills` + `web-fetch` per domain, proposes stack + tradeoffs (cost/perf/scale/maintain) with pros/cons + recommendation.
 4. PLAN: after approval, agent generates custom `PLAN.md` P0-P15 with DAG `depends_on` + ownership + gates.
@@ -77,23 +77,23 @@ Per phase defines:
 - **Bots:** Solo 2 (Release App + Renovate pref) Team 5 (+CODEOWNERS+Stale+Labeler+CodeQL) via `scripts/setup-bots.sh` (L17).
 - **No ABG traces (L19):** ABG gitignored; CI fails if `git ls-files | grep agentic` found.
 
-## 8. Publish & deploy — CI only (L18)
+## 8. Publish & deploy - CI only (L18)
 
 - No manual `npm publish`/`docker push`/`terraform apply`/`kubectl`.
 - npm `release.yml` `NPM_TOKEN` provenance, docker `docker-publish.yml` buildx → ECR/ACR/GCR/GHCR (semver+sha), cloud AWS/Azure/GCP terraform `plan/apply` S3/GCS `terraform.yml`, k8s ArgoCD/Flux or helm/kubectl `k8s-deploy.yml`, Jenkins if self-host else GH Actions, VPS `deploy.yml`. All `environment:production` + OIDC.
 
-## 9. Improvement loop — real SWE
+## 9. Improvement loop - real SWE
 
 - Framework: `v1 → Project → Failure → Root-cause → Classify (SKILL|WORKFLOW|TEST|SPEC|ARCH|TOOLING|AGENT) → fix right layer → v2` (L5).
 - User says "aise nahi aise karo" → agent returns std format `docs/agent-feedback/NN.md` (Observation|Impact|RootCause|Classification|PreventiveChange|FrameworkChange file+lines|RegressionCheck) + next L block + diff (L20).
 - New LLM: when built with newer model, agent also proposes ABG improvement from its knowledge in same format (L25).
 - Store incremental exp; prefer referencing (links to docs/skills/repos) over dumping so ABG stays latest via live web-fetch at build time (L24).
 
-## 10. Karpathy core (L9) — in AGENTS.md
+## 10. Karpathy core (L9) - in AGENTS.md
 
-- Think Before Coding — Simplicity First — Surgical Changes — Goal-Driven Execution.
+- Think Before Coding - Simplicity First - Surgical Changes - Goal-Driven Execution.
 
-## 11. Resources — on-demand only
+## 11. Resources - on-demand only
 
 | Resource | When |
 |---|---|
@@ -108,7 +108,7 @@ Evaluate future repos against 4 filters: modular plug, small core, token-efficie
 - Source: `Emmraan/agent-skills` + this guide.
 - Archetypes: `archetypes/{static-site,crud-saas,multi-service,ai-native}.yml`.
 - Maintenance: `maintenance/{day2,upgrade,deprecation,resume}.md`.
-- All external versions/links: `REFERENCES.md` — web-fetch live before build (reference > dump, L24).
+- All external versions/links: `REFERENCES.md` - web-fetch live before build (reference > dump, L24).
 
 ---
-Compact core — meaning preserved. Keep this file ~250 lines; details in templates/resources via manifest.
+Compact core - meaning preserved. Keep this file ~250 lines; details in templates/resources via manifest.

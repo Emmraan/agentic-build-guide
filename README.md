@@ -1,47 +1,61 @@
 # Agentic Build Guide: Universal v2
 
-Small core and on-demand layers to build any product like a company with a real SWE. Always up to date via references, not dumps.
+[![Template](https://img.shields.io/badge/Template-Use%20this%20template-blue)](https://github.com/Emmraan/agentic-build-guide/generate)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Validate](https://github.com/Emmraan/agentic-build-guide/actions/workflows/validate.yml/badge.svg)](https://github.com/Emmraan/agentic-build-guide/actions/workflows/validate.yml)
 
-> Core `AGENTIC_BUILD_GUIDE.md` is about 113 lines, around 800 tokens. Templates, archetypes and resources load on demand.
+A small core and on-demand layers to build any product like a company with a real SWE. Always up to date via references, not dumps.
 
-## Features
+You give an idea, the agent asks follow-ups, proposes a stack with cost, performance and scale tradeoffs, then builds in phases. Works for a new project and for future maintenance.
 
-- **Universal:** one guide for any project (static site, CRUD SaaS, multi-service, AI-native) via `archetypes/*.yml`.
-- **Phase Contract:** P0-P15 with DAG `depends_on`, File Ownership Map, deterministic gates.
-- **Parallel:** 15 phases → 1 day via waves (P0-2 seq → P3-6 // P7-11 // P12-15 seq), 15 sub-agents.
-- **Modes:** AUTONOMOUS (non-stop parallel) or NORMAL (per-phase pause), switchable `mode: autonomous|normal`.
-- **Resume:** file checkpoints `PLAN Status` + `PROGRESS.md` + `HANDOFF-NN.md` — new session reads 3 files ~800 tokens.
-- **Clean:** <500 LOC per file, token-saver docs, AI-pattern BAN (CI fails if detected).
-- **CI only:** npm/docker/terraform/k8s never manual; GitHub App bypass for protected branches.
+## Contents
 
-## Quick use for new project
+- [Quick start](#quick-start)
+- [How it works](#how-it-works)
+- [Structure](#structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-1. Copy this guide into new repo: `npx degit Emmraan/agentic-build-guide` or `Use this template` (this repo is a template). It is gitignored in product repos (L19).
-2. Add your idea: prompt in chat OR drop `idea.txt`/`idea.md` in root then say `read idea`.
-3. Agent asks follow-ups, runs `using-agent-skills` + `find-skills` + `web-fetch` (see `REFERENCES.md`), proposes stack with cost/perf/scale tradeoffs.
-4. Approve → agent generates custom `PLAN.md` P0-P15.
-5. Say `build` → AUTONOMOUS builds non-stop (parallel waves) until you `stop`; switch mode anytime.
+## Quick start
 
-Details: `AGENTIC_BUILD_GUIDE.md`.
+```bash
+# 1. Use this template or copy the folder
+npx degit Emmraan/agentic-build-guide agentic-build-guide
 
-## Folder
+# 2. Add your idea
+echo "Build a SaaS directory with 100 products" > idea.md
 
+# 3. Let the agent plan and build
+# in chat: read idea.md, then approve PLAN, then say build
 ```
-AGENTIC_BUILD_GUIDE.md  PLAN.template.md  AGENTS.template.md  PROGRESS.template.md
-ARCHITECTURE.template.md  REFERENCES.md
-archetypes/{static-site,crud-saas,multi-service,ai-native}.yml
-maintenance/{day2,upgrade,deprecation,resume}.md
-resources/{token-optimization,code-graph,memory}/
-docs/agent-feedback/00-template.md
-scripts/{protect-branch.sh,setup-bots.sh,check-*.sh}
-.github/workflows/{validate,release,docker-publish}.yml
-.opencode/commands/{new-phase,ship-phase,retro}.md
-```
+
+Details are in [AGENTIC_BUILD_GUIDE.md](AGENTIC_BUILD_GUIDE.md) which is about 113 lines and around 800 tokens. Templates, archetypes and resources load on demand.
+
+## How it works
+
+- **Idea to plan:** agent runs `using-agent-skills` and `find-skills` plus `web-fetch` of docs in [REFERENCES.md](REFERENCES.md) and proposes a stack. You approve a custom `PLAN.md` with P0 to P15, a DAG and file ownership.
+- **Build modes:** AUTONOMOUS runs non-stop with parallel waves (P0-2 seq, P3-6 parallel, P7-11 parallel, P12-15 seq) or NORMAL pauses per phase. Switch with `mode: autonomous` or `mode: normal`. Any maintenance plan uses the same rule.
+- **Resume:** file checkpoints `PLAN Status` plus `PROGRESS.md` plus `HANDOFF-NN.md`. A new session reads 3 files and continues. Task progress is cleaned on completion, repo context stays.
+- **Quality:** every code file under 500 lines, clean industry style, comments only when needed, AI pattern blocked by CI.
+
+## Structure
+
+| Path | Purpose |
+|---|---|
+| `AGENTIC_BUILD_GUIDE.md` | Core guide, small and token efficient |
+| `PLAN.template.md` `AGENTS.template.md` `PROGRESS.template.md` `ARCHITECTURE.template.md` | Project OS templates |
+| `REFERENCES.md` | All external links, agent web-fetches live |
+| `archetypes/` | `static-site`, `crud-saas`, `multi-service`, `ai-native` presets |
+| `maintenance/` | Day 2, upgrade, deprecation, resume runbooks |
+| `resources/` | `token-optimization`, `code-graph`, `memory` on demand |
+| `scripts/` | `protect-branch.sh`, `setup-bots.sh`, `check-*.sh` |
+| `.github/workflows/` | `validate` and `release` (GitHub tags only) |
+| `.opencode/commands/` | `new-phase`, `ship-phase`, `retro` |
 
 ## Contributing
 
-See `CONTRIBUTING.md` — `feat/*`/`fix/*` branches, Conventional Commits, tested PRs, CI `validate` must pass. Code of conduct: `CODE_OF_CONDUCT.md`. Security: `SECURITY.md`. License: `LICENSE` (MIT).
+See [CONTRIBUTING.md](CONTRIBUTING.md) for branches `feat/*` and `fix/*`, Conventional Commits and tested PRs. By participating you agree to [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md). For security see [SECURITY.md](SECURITY.md).
 
-## References
+## License
 
-Latest links: `REFERENCES.md` — agent web-fetches live before building.
+MIT, see [LICENSE](LICENSE).

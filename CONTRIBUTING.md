@@ -1,6 +1,6 @@
 # Contributing
 
-For developers and users — AI agents follow `AGENTIC_BUILD_GUIDE.md`.
+For developers and users - AI agents follow `AGENTIC_BUILD_GUIDE.md`.
 
 ## Quick start
 
@@ -20,7 +20,7 @@ For developers and users — AI agents follow `AGENTIC_BUILD_GUIDE.md`.
 
 - PR must be tested (`coverage ≥80%` on `lib/` where applicable).
 - CI `validate` must pass: lint, typecheck, tests, ai-pattern, loc <500.
-- No AI slop pattern — keep docs/code clean (see `AGENTIC_BUILD_GUIDE.md` L27).
+- No AI slop pattern - keep docs/code clean (see `AGENTIC_BUILD_GUIDE.md` L27).
 
 ## Reporting issues
 

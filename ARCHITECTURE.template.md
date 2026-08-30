@@ -1,6 +1,6 @@
-# ARCHITECTURE — {{project_name}}
+# ARCHITECTURE - {{project_name}}
 
-> Repo-level context — kept current, never cleaned (L23). New agent reads this + AGENTS.md + PLAN Status.
+> Repo-level context - kept current, never cleaned (L23). New agent reads this + AGENTS.md + PLAN Status.
 
 ## Stack
 
@@ -10,7 +10,7 @@
 
 - {{schemas, types, validation}}
 
-## Folder structure (modular, <500 LOC per file — L10)
+## Folder structure (modular, <500 LOC per file - L10)
 
 ```
 app/              # routes (SSG where possible)

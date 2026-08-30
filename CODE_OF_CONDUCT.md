@@ -1,6 +1,6 @@
 # Code of Conduct
 
-Adopted from Contributor Covenant v2.1. For users and contributors — not AI.
+Adopted from Contributor Covenant v2.1. For users and contributors - not AI.
 
 ## Our pledge
 

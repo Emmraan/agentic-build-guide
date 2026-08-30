@@ -1,14 +1,14 @@
-# AGENTS — {{project_name}}
+# AGENTS - {{project_name}}
 
 > Stack: {{stack}} | Mode: {{mode: autonomous|normal}} | Source: agentic-build-guide v2
-> ref: `REFERENCES.md` — web-fetch latest before any phase (L11/L24).
+> ref: `REFERENCES.md` - web-fetch latest before any phase (L11/L24).
 
 ## 0. Karpathy 4 (core)
 
-- Think Before Coding — plan before edit.
-- Simplicity First — minimal change that passes gate.
-- Surgical Changes — touch only owned files (File Ownership Map).
-- Goal-Driven — exit criteria before code.
+- Think Before Coding - plan before edit.
+- Simplicity First - minimal change that passes gate.
+- Surgical Changes - touch only owned files (File Ownership Map).
+- Goal-Driven - exit criteria before code.
 
 ## 1. No blind task (L11)
 
@@ -29,7 +29,7 @@ Before any phase/task:
 
 - Every code file <500 LOC strict; feature/domain split (L10). CI `loc <500` fails.
 - All `.md`/docs token-saver style: tables/lists, 60-80 char lines, compact (L26).
-- Comments only when important, human-readable; AI pattern BAN — build FAIL if detected (L27).
+- Comments only when important, human-readable; AI pattern BAN - build FAIL if detected (L27).
 - Maker≠Checker: BUILD ≠ VERIFY; schema/validator before content; evidence gates `lint typecheck test coverage validate`.
 
 ## 4. Git & CI
@@ -42,4 +42,4 @@ Before any phase/task:
 ## 5. Improvement
 
 - On user "aise nahi aise karo" or new LLM knowledge, propose std format `docs/agent-feedback/NN.md` + next L block + diff (L20/L25).
-- Prefer referencing external docs/skills over dumping (L24) — fetch latest at build time.
+- Prefer referencing external docs/skills over dumping (L24) - fetch latest at build time.

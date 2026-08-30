@@ -1,4 +1,4 @@
-# /new-phase — cut next phase branch
+# /new-phase - cut next phase branch
 
 1. Read `PLAN.md Status` + `PROGRESS.md` + last `HANDOFF-NN.md`.
 2. Verify prior merge gates pass.
